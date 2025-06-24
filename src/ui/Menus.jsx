@@ -35,8 +35,8 @@ const StyledList = styled.ul`
   background-color: var(--color-grey-0);
   box-shadow: var(--shadow-md);
   border-radius: var(--border-radius-md);
-  right: ${(props) => props.position.x}px;
-  top: ${(props) => props.position.y}px;
+  right: ${(props) => props.$position.x}px;
+  top: ${(props) => props.$position.y}px;
   z-index: 1;
 `;
 
@@ -115,7 +115,7 @@ function List({ id, children }) {
   if (openId !== id) return null;
 
   return (
-    <StyledList ref={ref} position={position}>
+    <StyledList ref={ref} $position={position}>
       {children}
     </StyledList>
   );
